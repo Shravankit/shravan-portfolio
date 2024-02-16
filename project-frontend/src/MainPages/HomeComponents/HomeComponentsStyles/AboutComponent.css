@@ -1,0 +1,20 @@
+#about-section{
+    width: fit-content;
+    display: flex;
+    place-items: left;
+}
+.aboutComponent{
+    /* display: grid; */
+    /* place-items: center */
+    width: 50%;
+    padding: 0 0 0 10%;
+    text-align: left;
+}
+
+.aboutComponent h2{
+    font-size: 25px;
+}
+
+.aboutComponent h1{
+    font-size: 40px;
+}

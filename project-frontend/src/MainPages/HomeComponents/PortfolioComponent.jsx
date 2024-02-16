@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PortfolioComponent()
 {
-    return <section>
+    return <section className='allSections'>
         <div>
             <h1>
                 Portfolio
