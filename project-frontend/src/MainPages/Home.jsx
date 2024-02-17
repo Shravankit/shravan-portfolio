@@ -6,6 +6,7 @@ import PortfolioComponent from './HomeComponents/PortfolioComponent';
 
 export default function Home()
 {
+
     return<section>
        <HeroComponent />
        <SkillsComponent />

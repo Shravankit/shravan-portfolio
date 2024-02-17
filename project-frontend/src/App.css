@@ -1,9 +1,10 @@
 .App {
   text-align: center;
   font-family: 'inter';
-  color: #fff;
-  background: rgb(26, 31, 41) no-repeat fixed top;
-  background-size: cover;
+  color: #000;
+  /* background: transparent; */
+  /* background: linear-gradient(#121212, #1E1E1E) no-repeat fixed top;
+  background-size: cover; */
   
 }
 

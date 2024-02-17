@@ -6,6 +6,7 @@
 }
 
 .skill{
+    display: grid;
     width: 400px;
     height: 20vh;
     border: 1px solid black;
@@ -14,11 +15,54 @@
     border-radius: 25px;
     margin: 5% 5%;
     display: grid;
-    place-items: center;
-    font-size: 2rem;
+    place-items: left;
+    font-size: 1.5rem;
     font-weight: bold;
-    /* background: gray; */
     backdrop-filter: blur(10px);
-    /* backdrop-filter: brightness(50%);
-    backdrop-filter: contrast(50%); */
+    visibility: hidden;
+    
+}
+
+.skill h1{
+    color: #7E57C2;
+}
+
+.skill p{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.skillAnim{
+    animation: opacityAndTranslate 0.5s ease-in-out forwards;
+}
+
+.skillAnim1{
+    animation: opacityAndTranslate 0.5s ease-in-out forwards;
+    visibility: visible;
+}
+
+.skillAnim2{
+    animation: opacityAndTranslate 0.7s ease-in-out forwards;
+    visibility: visible;
+}
+
+.skillAnim3{
+    animation: opacityAndTranslate 0.9s ease-in-out forwards;
+    visibility: visible;
+}
+
+.skillAnim4{
+    animation: opacityAndTranslate 1.1s ease-in-out forwards;
+    visibility: visible;
+}
+
+@keyframes opacityAndTranslate{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
