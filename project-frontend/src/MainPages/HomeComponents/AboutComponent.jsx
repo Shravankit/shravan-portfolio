@@ -10,7 +10,7 @@ export default function AboutComponent()
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.7,
+        threshold: 0.5,
     };
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export default function AboutComponent()
     }, [])
 
     return <section id='about-section' className='allSections' ref={aboutRef}>
-        <div className='aboutComponent-image'>
+        <div className={`aboutComponent-image ${aboutVisible ? 'aboutImgAnim' : ''}`}>
             <img src={'images/ProfileImage.png'} alt='profile about main' />
         </div>
         <div className='aboutComponent'>

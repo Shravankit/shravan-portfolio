@@ -5,6 +5,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    /* backdrop-filter: blur(20px); */
 }
 .hero-component{
     display: grid;
@@ -22,6 +23,7 @@
 
 .hero-section-images img{
     width: 100%;
+    visibility: hidden;
 }
 
 .hero-component h1{

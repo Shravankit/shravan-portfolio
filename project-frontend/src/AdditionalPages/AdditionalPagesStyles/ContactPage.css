@@ -1,0 +1,57 @@
+#contact-section{
+    display: flex;
+    place-content: center;
+    justify-content: space-around;
+}
+
+form{
+    display: grid;
+    gap: 10px;
+}
+
+form input{
+    width: 25rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+.name-number{
+    display: flex;
+    justify-content: space-between;
+}
+.name-number input
+{
+    width: 12rem;
+    height: 2rem;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid black
+}
+
+form textarea{
+    width: 25rem;
+    height: 10rem;
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid black
+}
+
+.contactpage button{
+    width: 10rem;
+    height: 2rem;
+}
+
+.contact-image{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    /* background-color: bisque; */
+}
+
+.contact-image img{
+    width: 50%;
+    border-radius: 25px;
+    padding: 5px;
+    border: 2px solid black;
+}

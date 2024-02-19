@@ -1,0 +1,17 @@
+#aboutPage{
+    display: grid;
+    place-content: center;
+}
+
+#aboutPage img{
+    width: 10%;
+}
+
+#aboutPage h1{
+    font-size: 2rem;
+}
+
+#aboutPage p{
+    width: 50%;
+    font-size: 1.2rem;
+}

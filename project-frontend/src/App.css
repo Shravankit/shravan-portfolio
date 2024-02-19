@@ -1,10 +1,13 @@
 .App {
   text-align: center;
-  font-family: 'inter';
-  color: #000;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
   /* background: transparent; */
   /* background: linear-gradient(#121212, #1E1E1E) no-repeat fixed top;
   background-size: cover; */
+  background: rgba(0, 0, 0, 0.5) url('../public/images/background.jpg') no-repeat fixed top;
+  background-size: cover;
+  background-blend-mode: hue;
   
 }
 

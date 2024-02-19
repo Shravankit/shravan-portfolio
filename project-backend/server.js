@@ -34,12 +34,46 @@ const blogsSchema = new mongoose.Schema({
     blogTitle: String,
     blogData: String,
 });
+
+//project Schema
+const projectSchema = new mongoose.Schema({
+    querierName: String,
+    querierNumber: Number,
+    querierEmail: String,
+    projectTitle: String,
+    projectDescription: String,
+})
 //----------------------------------------------------------------
 
 //mongoose models-------------------------------------------------
 const Users = mongoose.model("user", userSchema);
 const Blogs = mongoose.model("blog", blogsSchema);
-//...............................................................
+const Project = mongoose.model("project", projectSchema);
+//................................................................
+
+// project storing logic
+
+app.post('/api/project', async (req, res) => {
+    const {querierName, querierNumber, querierEmail, projectTitle, projectDescription} = req.body;
+    
+    try {
+
+        const projectData = new Project({
+            querierName,
+            querierNumber,
+            querierEmail,
+            projectTitle,
+            projectDescription,
+        });
+
+        await projectData.save();
+        res.status(200).json({ message: 'saved successfully' });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+})
 
 
 app.listen(PORT, () => {

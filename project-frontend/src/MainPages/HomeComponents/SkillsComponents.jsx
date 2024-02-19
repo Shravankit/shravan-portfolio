@@ -10,7 +10,7 @@ export default function SkillsComponent()
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.7,
+            threshold: 0.6,
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -39,7 +39,7 @@ export default function SkillsComponent()
                     3D Artist
                 </h1>
                 <p>
-                    udfhgos;ghpirghpiwotshh[ishj[t]]
+                    Proficient in crafting high-quality, lifelike 3D models with meticulous attention to detail, encompassing both organic and hard surface designs.
                 </p>
             </div>
             <div className={`skill ${skillDiv ? 'skillAnim2' : '' }`}>
@@ -47,7 +47,7 @@ export default function SkillsComponent()
                     3D Animation
                 </h1>
                 <p>
-                    udfhgos;ghpirghpiwotshh[ishj[t]]
+                    Proficient in crafting high-quality, lifelike 3D models with meticulous attention to detail, encompassing both organic and hard surface designs.
                 </p>
             </div>
             <div className={`skill ${skillDiv ? 'skillAnim3' : '' }`}>
@@ -55,7 +55,7 @@ export default function SkillsComponent()
                     Web Development
                 </h1>
                 <p>
-                    udfhgos;ghpirghpiwotshh[ishj[t]]
+                    Proficient in crafting high-quality, lifelike 3D models with meticulous attention to detail, encompassing both organic and hard surface designs.
                 </p>
             </div>
             <div className={`skill ${skillDiv ? 'skillAnim4' : '' }`}>
@@ -63,7 +63,7 @@ export default function SkillsComponent()
                     Game Devlopment
                 </h1>
                 <p>
-                    udfhgos;ghpirghpiwotshh[ishj[t]]
+                    Proficient in crafting high-quality, lifelike 3D models with meticulous attention to detail, encompassing both organic and hard surface designs.
                 </p>
             </div>
             

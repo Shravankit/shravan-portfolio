@@ -1,0 +1,43 @@
+#portfolio-section{
+    /* backdrop-filter: blur(10px); */
+    overflow: hidden;
+}
+
+.portfolio-title h1{
+    font-size: 2rem;
+}
+
+.contact-form{
+    width: 100%;
+    display: grid;
+    /* background-color: aquamarine; */
+    place-items: center;
+    
+}
+
+.portfolio-images
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust the size of columns */
+    gap: 10px; /* Add gap between images */
+    justify-items: center; 
+}
+.portfolio-images img{
+    width: 100%;
+    height: auto;
+    /* height: 10vh; */
+}
+
+.portfolio-images img:hover{
+    animation: imageEnhancer 0.2s ease-in-out forwards;
+    
+}
+
+@keyframes imageEnhancer{
+    form{
+        width: 100%;
+    }
+    to{
+        width: 110%;
+    }
+}

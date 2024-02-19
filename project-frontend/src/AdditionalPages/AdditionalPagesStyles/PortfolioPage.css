@@ -1,0 +1,32 @@
+#portfolioPage{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+}
+
+.portfolio{
+    height: auto;
+}
+
+.portfolioPage-Heading{
+    margin: 0;
+    padding: 5% 0 2% 0;
+}
+
+.portfolioPage-Heading h1{
+    font-size: 2rem;
+}
+
+.portfolioPage-gallery
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust the size of columns */
+    gap: 10px; /* Add gap between images */
+    justify-items: center; 
+}
+
+.portfolioPage-images img{
+    width: 100%;
+    height: auto;
+}
