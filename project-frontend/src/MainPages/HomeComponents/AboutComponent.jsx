@@ -40,7 +40,7 @@ export default function AboutComponent()
         <div className={`aboutComponent-image ${aboutVisible ? 'aboutImgAnim' : ''}`}>
             <img src={'images/ProfileImage.png'} alt='profile about main' />
         </div>
-        <div className='aboutComponent'>
+        <div className={`aboutComponent ${aboutVisible ? 'aboutComponentAnim' : ''}`}>
             <h1 className={`about ${aboutVisible ? 'aboutContent1Anim' : ''}`}>
                 About Me
             </h1>

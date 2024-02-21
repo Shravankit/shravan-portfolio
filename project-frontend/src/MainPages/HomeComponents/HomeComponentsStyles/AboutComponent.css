@@ -31,6 +31,11 @@
     visibility: hidden;
 }
 
+.aboutComponentAnim{
+    animation: dataDropVisiable 0.4s ease-in-out forwards;
+    backdrop-filter: blur(10px);
+}
+
 .aboutContent1Anim{
     animation: dataDropVisiable 0.5s ease-in-out forwards;
     visibility: visible;

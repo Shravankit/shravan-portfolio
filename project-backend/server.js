@@ -73,7 +73,17 @@ app.post('/api/project', async (req, res) => {
         console.error(error);
         res.status(500).json({ message: 'Internal Server Error' });
     }
-})
+});
+
+app.get('/api/project', async (req, res) => {
+    try {
+        const response = await Project.find();
+        res.status(200).json(response);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message: 'internal servevr issue'});
+    }
+});
 
 
 app.listen(PORT, () => {

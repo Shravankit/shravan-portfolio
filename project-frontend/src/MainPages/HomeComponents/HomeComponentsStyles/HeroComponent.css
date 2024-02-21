@@ -16,6 +16,12 @@
     /* background-color: aquamarine; */
 }
 
+.hero-component h1{
+    width: 50%;
+}
+.hero-component h2{
+    width: 50%;
+}
 .hero-section-images{
     width: 30%;
     /* background-color: aqua; */
@@ -23,7 +29,8 @@
 
 .hero-section-images img{
     width: 100%;
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
 
 .hero-component h1{
