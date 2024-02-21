@@ -36,9 +36,9 @@
 
 @keyframes imageEnhancer{
     form{
-        width: 100%;
+        scale: 1;
     }
     to{
-        width: 110%;
+        scale: 1.2;
     }
 }

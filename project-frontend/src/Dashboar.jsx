@@ -2,33 +2,50 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Dashboard.css';
 
-export default function Dashboard()
-{
-    const [project, setProjects] = useState([]);
+export default function Dashboard() {
+    const [active, setActive] = useState('Projects'); // Set default active state to 'Projects'
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:3001/api/project')
-        .then(response => {
-            setProjects(response.data)
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    });
-    return<section id='dashboard-section' className='allSections'>
-        Dashboard
-        <div className='dashboard'>
-            {project.map((projects) => {
-                return <div className='project'>
-                    <h2>{projects.querierName}</h2>
-                    <h1>{projects.projectTitle}</h1>
-                    <p>{projects.projectDescription}</p>
-                    <div>
-                        <h3>{projects.querierNumber}</h3>
-                        <h3>{projects.querierEmail}</h3>
-                    </div>
+            .then(response => {
+                setProjects(response.data)
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }, []); // Added an empty dependency array to ensure useEffect runs only once on component mount
+
+    const handleActive = (e) => {
+        setActive(e.target.innerText); // Change active state based on button text
+    }
+
+    return (
+        <section id='dashboard-section' className='allSections'>
+            Dashboard
+            <div className='dashboard-components'>
+                <div className='dashboard-options'>
+                    <button onClick={handleActive}>Projects</button>
+                    <button onClick={handleActive}>Blogs</button>
                 </div>
-            })}
-        </div>
-    </section>
+                <div className='dashboard'>
+                    {active === 'Projects' ? (
+                        projects.map((project, index) => ( // Fixed mapping over projects array
+                            <div className='project' key={index}>
+                                <h2>{project.querierName}</h2>
+                                <h1>{project.projectTitle}</h1>
+                                <p>{project.projectDescription}</p>
+                                <div>
+                                    <h3>{project.querierNumber}</h3>
+                                    <h3>{project.querierEmail}</h3>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <h1>Blogs</h1>
+                    )}
+                </div>
+            </div>
+        </section>
+    );
 }

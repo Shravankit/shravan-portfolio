@@ -3,23 +3,50 @@
     place-content: center;
 }
 
+.dashboard-components{
+    display: flex;
+    width: 100vw;
+    /* background-color: blue; */
+}
+
+.dashboard-options{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    /* padding: 0 10%; */
+    /* background-color: wheat; */
+}
+
+.dashboard-options button{
+    width: 50%;
+    height: 5vh;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
 .dashboard{
     display: flex;
     justify-content: space-around;
     place-items: center;
     height: 70vh;
-    min-width: 800px;
+    width: 85vw;
+    /* background-color: blueviolet; */
     max-width: 1300px;
 }
 
 .project{
     display: grid;
     place-items: center;
-    width: 350px;
+    width: 400px;
     min-height: 20vh;
     max-height: auto;
     /* background-color: blue; */
-    border: 1px solid ;
+    border: .5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 .project h1{

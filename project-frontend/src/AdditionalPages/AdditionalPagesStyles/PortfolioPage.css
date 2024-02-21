@@ -30,3 +30,18 @@
     width: 100%;
     height: auto;
 }
+
+
+.portfolioPage-images img:hover{
+    animation: imageEnhancer 0.5s ease-in-out forwards;
+    
+}
+
+@keyframes imageEnhancer{
+    form{
+        scale: 1;
+    }
+    to{
+        scale: 2;
+    }
+}
