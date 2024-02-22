@@ -8,6 +8,7 @@ import AboutPage from './AdditionalPages/AboutPage';
 import PortfolioPage from './AdditionalPages/PortfolioPage';
 import ScrollToTop from './ScrollToTop';
 import Dashboard from './Dashboar';
+import Blog from './AdditionalPages/Blog';
 // import { useEffect } from 'react';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/portfolio' element={<PortfolioPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/blogs' element={<Blog />}/>
       </Routes>
       <Footer />
     </div>

@@ -86,6 +86,48 @@ app.get('/api/project', async (req, res) => {
 });
 
 
+//blogs logic
+app.post('/api/blogs', async (req, res) => {
+    const {blogTitle, blogData} = req.body;
+
+    try {
+        const newBlog = new Blogs({
+            blogTitle,
+            blogData,
+        });
+
+        await newBlog.save();
+        res.status(200).json({message: 'blog saved succesfully'});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message: 'internal server issue'});
+    }
+});
+
+app.get('/api/blogs', async (req, res) => {
+    try {
+        const blogs = await Blogs.find();
+        res.status(200).json(blogs);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message: 'internal server issue'})
+    }
+})
+
+app.delete('/api/blogs/:id', async (req, res) => {
+    try {
+        const deleteBlog = await Blogs.findByIdAndDelete(req.params.id);
+        if(!deleteBlog)
+        {
+            return res.status(404).json({message: 'blog is not deleted'});
+        }
+        res.json({message: 'blog deleted succesfully'});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: error.message });
+    } 
+});
+
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`);
 });

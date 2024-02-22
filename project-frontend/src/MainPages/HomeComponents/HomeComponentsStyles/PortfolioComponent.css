@@ -31,7 +31,7 @@
 
 .portfolio-images img:hover{
     animation: imageEnhancer 0.2s ease-in-out forwards;
-    
+    /* z-index: 5; */
 }
 
 @keyframes imageEnhancer{

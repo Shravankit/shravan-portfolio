@@ -6,14 +6,19 @@
 .dashboard-components{
     display: flex;
     width: 100vw;
+    min-height: 80vh;
+    max-height: auto;
     /* background-color: blue; */
 }
 
 .dashboard-options{
     width: 15vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     place-items: center;
+    border-right: 2px solid;
+    position: sticky;
     /* padding: 0 10%; */
     /* background-color: wheat; */
 }
@@ -31,10 +36,16 @@
     display: flex;
     justify-content: space-around;
     place-items: center;
-    height: 70vh;
+    min-height: 70vh;
+    max-height: auto;
     width: 85vw;
     /* background-color: blueviolet; */
     max-width: 1300px;
+    overflow-y: scroll;
+}
+
+.dashboard::-webkit-scrollbar{
+    display: none;
 }
 
 .project{

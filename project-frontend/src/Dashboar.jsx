@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Dashboard.css';
+import Blogs from './Blogs';
 
 export default function Dashboard() {
     const [active, setActive] = useState('Projects'); // Set default active state to 'Projects'
@@ -22,7 +23,6 @@ export default function Dashboard() {
 
     return (
         <section id='dashboard-section' className='allSections'>
-            Dashboard
             <div className='dashboard-components'>
                 <div className='dashboard-options'>
                     <button onClick={handleActive}>Projects</button>
@@ -42,7 +42,7 @@ export default function Dashboard() {
                             </div>
                         ))
                     ) : (
-                        <h1>Blogs</h1>
+                        <Blogs />
                     )}
                 </div>
             </div>
